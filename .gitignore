@@ -1,0 +1,7 @@
+#Directory
+venv/*
+.idea/*
+
+#Files
+*.log
+*.out
