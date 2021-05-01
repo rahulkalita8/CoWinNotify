@@ -31,10 +31,8 @@ class Mail:
         if encoded:
             password_bytes = base64.b64decode(self.password)
             self.password = password_bytes.decode("ascii")
-        print(smtp_host, smtp_port)
         self.server = smtplib.SMTP(smtp_host, smtp_port)
         self.server.starttls()
-        print(self.username + " " + self.password)
         self.server.login(self.username, self.password)
 
     def send_mail(self, sender, receivers, subject, body):
@@ -42,7 +40,6 @@ class Mail:
         self.server.sendmail(sender, receivers, self.message.as_string())
 
     def create_message(self, sender, receivers, subject, body):
-        print(sender + " " + receivers + " " + subject + " " + body)
         self.message = email.message.Message()
         self.message['From'] = sender
         self.message['To'] = str(receivers)
