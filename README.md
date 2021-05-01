@@ -10,7 +10,7 @@
 
 Go to https://myaccount.google.com/lesssecureapps and enable it. This will help the program to send email notfication. 
 
-##How to Configure
+## How to Configure
 
 1. Clone the repo
 2. Install python packaged from requirements.txt.  
@@ -58,4 +58,4 @@ Please add necessary logging if required and monitor `app.log`.
 
 ## Possible Errors
 1. SMTP Error: username and password cannot be authenticated
-`Please refer ` 
+Please refer [Prerequisites](#prerequisites) 
